@@ -5,8 +5,8 @@ https://spring.io/guides/gs/serving-web-content/
 ## git、github
 https://github.com/
 ## git登录之Building OAuth and okhttp
-https://developer.github.com/apps/<br>
-https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/
+https://developer.github.com/apps/  
+https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/  
 https://square.github.io/okhttp/
 
     
