@@ -8,6 +8,9 @@ https://github.com/
 https://developer.github.com/apps/  
 https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/  
 https://square.github.io/okhttp/
+## 数据库的持久化 h2+mybatis+java
+http://www.h2database.com/html/main.html
+
 
     
     
