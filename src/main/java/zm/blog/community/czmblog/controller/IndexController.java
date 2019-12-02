@@ -15,7 +15,7 @@ public class IndexController {
 
     @Autowired
     private UserMapper userMapper;
-
+    /*在服务器重启的时候只要访问首页才能获取到数据库的cookie*/
     @GetMapping("/")
     public String index(HttpServletRequest request){
         Cookie[] cookies = request.getCookies();
