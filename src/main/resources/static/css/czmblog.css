@@ -9,3 +9,15 @@ body{
     float: right;
     margin-bottom: 15px;
 }
+.img-wh{
+    width: 60px;
+    height: 60px;
+}
+.text-desc{
+    font-size: 12px;
+    font-weight: normal;
+    color: #999;
+}
+.media-heading{
+    font-weight: bolder;
+}
