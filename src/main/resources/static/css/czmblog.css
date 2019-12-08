@@ -21,3 +21,6 @@ body{
 .media-heading{
     font-weight: bolder;
 }
+.media{
+    border: 1px solid #999;
+}
