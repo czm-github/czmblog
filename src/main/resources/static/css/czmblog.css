@@ -3,7 +3,7 @@ body{
 }
 .main{
     background-color: white;
-    margin: 30px;
+    margin: 90px;
 }
 .btn-publish{
     float: right;
@@ -23,4 +23,20 @@ body{
 }
 .media{
     border: 1px solid #999;
+}
+.profile .section{
+    margin-top: 15px;
+}
+.community-menu{
+    color: #999;
+    font-size: 13px;
+}
+.li-length{
+    width: 90px;
+    text-align: center;
+    font-size: 15px;
+    font-family: 楷体;
+}
+.nav-top-margin{
+    margin: 5px;
 }

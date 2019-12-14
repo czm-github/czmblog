@@ -72,16 +72,6 @@ public class PublishController {
     }
     /*这个方法是判断get和post提交访问此也时user数据库中是否存在,如果查询失败mybatis会返回一个null值给user*/
     public void SelectCookies(HttpServletRequest request){
-        Cookie[] cookies = request.getCookies();
-        for(Cookie cookie : cookies){
-            if(cookie.getName().equals("token")){
-                String token = cookie.getValue();
-                user = userMapper.findByToken(token);
-                if(user != null){
-                    request.getSession().setAttribute("user",user);
-                }
-                break;
-            }
-        }
+        user = (User) request.getSession().getAttribute("user");
     }
 }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>导航栏</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="css/czmblog.css"/>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js" type="application/javascript"></script>
+</head>
+<body>
+<div th:fragment="nav">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header nav-top-margin">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">博客</span>
+                </button>
+                <a class="navbar-brand" href="/">CZM</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="navbar-form navbar-left">
+                    <ul class="nav nav-pills navbar-left nav-top-margin">
+                        <li class="li-length active"><a href="/">推荐</a></li>
+                        <li class="li-length"><a href="/">关于</a></li>
+                        <li class="li-length"><a href="/">关于</a></li>
+                        <li class="li-length"><a href="/">关于</a></li>
+                        <li class="li-length"><a href="/">关于</a></li>
+                        <li class="li-length"><a href="/">关于</a></li>
+                        <li class="li-length"><a href="/">关于</a></li>
+                    </ul>&nbsp;
+                    <div class="input-group nav-top-margin">
+                        <input type="text" class="form-control" placeholder="请输入问题关键字">
+                        <div class="input-group-btn">
+                            <!-- Buttons -->
+                            <button class="btn btn-default">Search</button>
+                        </div>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <!--发布文章模块-->
+                    <li th:if="${session.user != null}">
+                        <a href="/publish" class="nav-top-margin">发布</a>
+                    </li>
+                    <!--使用github登录的方式-->
+                    <li class="dropdown" th:if="${session.user != null}">
+                        <a href="#" class="dropdown-toggle nav-top-margin" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span th:text="${session.user.getName()}"></span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/profile/questions">我的问题</a></li>
+                            <li><a href="/logout">退出登录</a></li>
+                        </ul>
+                    </li>
+                    <li th:if="${session.user == null}"><a href="https://github.com/login/oauth/authorize?client_id=ef177563cf41b03c075d&redirect_uri=http://localhost:8080/callback&scope=user&state=1">登录</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+</body>
+</html>
