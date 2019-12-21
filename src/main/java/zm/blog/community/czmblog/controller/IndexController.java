@@ -6,15 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import zm.blog.community.czmblog.dto.PaginationDTO;
-import zm.blog.community.czmblog.dto.QuestionDTO;
-import zm.blog.community.czmblog.mapper.UserMapper;
-import zm.blog.community.czmblog.model.User;
 import zm.blog.community.czmblog.service.QuestionService;
-
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import java.util.List;
-
 
 @Controller
 public class IndexController {

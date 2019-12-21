@@ -28,20 +28,6 @@ public class ProfileController {
                           @RequestParam(name = "page",defaultValue = "1") Integer page,
                           @RequestParam(name = "size",defaultValue = "5") Integer size){
         User user = null;
-        Cookie[] cookies = request.getCookies();
-        /*因为这个cookies如果被删除掉了就会报null异常，所以需要添加一个判断让用户重新点击登录*/
-        if(cookies != null && cookies.length != 0){
-            for(Cookie cookie : cookies){
-                if(cookie.getName().equals("token")){
-                    String token = cookie.getValue();
-                    user = userMapper.findByToken(token);
-                    if(user != null){
-                        request.getSession().setAttribute("user",user);
-                    }
-                    break;
-                }
-            }
-        }
         if(user == null){
             return "redirect:/";
         }

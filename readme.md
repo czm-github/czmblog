@@ -19,6 +19,8 @@ https://flywaydb.org/getstarted/firststeps/maven
 ## 小匠
 https://github.com/codedrinker/community/blob/master/README.md
 
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
+
 
     
     

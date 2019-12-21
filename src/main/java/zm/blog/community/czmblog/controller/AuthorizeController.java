@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import zm.blog.community.czmblog.dto.AccessTokenDTO;
 import zm.blog.community.czmblog.dto.GithubUser;
-import zm.blog.community.czmblog.mapper.UserMapper;
 import zm.blog.community.czmblog.model.User;
 import zm.blog.community.czmblog.provider.GithubProvider;
 import zm.blog.community.czmblog.service.UserService;

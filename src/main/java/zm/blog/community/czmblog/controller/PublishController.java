@@ -5,12 +5,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import zm.blog.community.czmblog.dto.QuestionDTO;
 import zm.blog.community.czmblog.mapper.QuestionMapper;
 import zm.blog.community.czmblog.mapper.UserMapper;
 import zm.blog.community.czmblog.model.Question;
 import zm.blog.community.czmblog.model.User;
+import zm.blog.community.czmblog.service.QuestionService;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 public class PublishController {
 
     @Autowired
-    private UserMapper userMapper;
+    private QuestionService questionService;
 
     @Autowired
     private QuestionMapper questionMapper;
@@ -37,6 +40,7 @@ public class PublishController {
             @RequestParam(value = "tag",required = false) String tag,
             @RequestParam(value = "description",required = false) String description,
             @RequestParam(value = "title",required = false) String title,
+            @RequestParam(value = "id",required = false) Integer id,
             Model model,
             HttpServletRequest request){
 
@@ -65,13 +69,24 @@ public class PublishController {
         question.setDescription(description);
         question.setTag(tag);
         question.setCreator(user.getId());
-        question.setGmtCreate(System.currentTimeMillis());
-        question.setGmtModified(question.getGmtCreate());
-        questionMapper.create(question);
+        question.setId(id);
+        questionService.createOrUpdate(question);
         return "redirect:/";
     }
     /*这个方法是判断get和post提交访问此也时user数据库中是否存在,如果查询失败mybatis会返回一个null值给user*/
     public void SelectCookies(HttpServletRequest request){
         user = (User) request.getSession().getAttribute("user");
+    }
+
+    /*根据id跳转到问题发布页面*/
+    @GetMapping("/publish/{id}")
+    public String edit(@PathVariable(name = "id") Integer id,
+                       Model model){
+        QuestionDTO question = questionService.getById(id);
+        model.addAttribute("tag",question.getTag());
+        model.addAttribute("description",question.getDescription());
+        model.addAttribute("title",question.getTitle());
+        model.addAttribute("id",id);
+        return "publish";
     }
 }
