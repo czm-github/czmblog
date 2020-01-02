@@ -24,9 +24,6 @@ public class PublishController {
     @Autowired
     private QuestionService questionService;
 
-    @Autowired
-    private QuestionMapper questionMapper;
-
     public User user = null;
 
     /*因为request的作用域是整个请求链，所以作为参数可以访问得到cookie*/
@@ -40,7 +37,7 @@ public class PublishController {
             @RequestParam(value = "tag",required = false) String tag,
             @RequestParam(value = "description",required = false) String description,
             @RequestParam(value = "title",required = false) String title,
-            @RequestParam(value = "id",required = false) Integer id,
+            @RequestParam(value = "id",required = false) Long id,
             Model model,
             HttpServletRequest request){
 
@@ -80,7 +77,7 @@ public class PublishController {
 
     /*根据id跳转到问题发布页面*/
     @GetMapping("/publish/{id}")
-    public String edit(@PathVariable(name = "id") Integer id,
+    public String edit(@PathVariable(name = "id") Long id,
                        Model model){
         QuestionDTO question = questionService.getById(id);
         model.addAttribute("tag",question.getTag());

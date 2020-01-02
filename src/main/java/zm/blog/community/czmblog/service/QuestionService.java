@@ -8,6 +8,7 @@ import zm.blog.community.czmblog.dto.PaginationDTO;
 import zm.blog.community.czmblog.dto.QuestionDTO;
 import zm.blog.community.czmblog.exception.CustomizeErrorCode;
 import zm.blog.community.czmblog.exception.CustomizeException;
+import zm.blog.community.czmblog.mapper.QuestionExtMapper;
 import zm.blog.community.czmblog.mapper.QuestionMapper;
 import zm.blog.community.czmblog.mapper.UserMapper;
 import zm.blog.community.czmblog.model.Question;
@@ -25,6 +26,9 @@ import java.util.List;
 public class QuestionService {
     @Autowired
     private QuestionMapper questionMapper;
+
+    @Autowired
+    private QuestionExtMapper questionExtMapper;
 
     @Autowired
     private UserMapper userMapper;
@@ -56,6 +60,7 @@ public class QuestionService {
             QuestionDTO questionDTO = new QuestionDTO();
             BeanUtils.copyProperties(question,questionDTO);
             questionDTO.setUser(user);
+            questionDTO.setDescription(question.getDescription());
             questionDTOList.add(questionDTO);
         }
         paginationDTO.setQuestionDTOS(questionDTOList);
@@ -64,7 +69,7 @@ public class QuestionService {
          */
         return paginationDTO;
     }
-    public PaginationDTO list(Integer userId,Integer page, Integer size) {
+    public PaginationDTO list(Long userId,Integer page, Integer size) {
         PaginationDTO paginationDTO = new PaginationDTO();
         QuestionExample questionExample = new QuestionExample();
         questionExample.createCriteria().andCreatorEqualTo(userId);
@@ -102,7 +107,7 @@ public class QuestionService {
     }
 
     /*返回首页查看的id的文章的详情*/
-    public QuestionDTO getById(Integer id) {
+    public QuestionDTO getById(Long id) {
         Question question = questionMapper.selectByPrimaryKey(id);
         if(question == null){
             throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
@@ -119,6 +124,9 @@ public class QuestionService {
             //创建
             question.setGmtCreate(System.currentTimeMillis());
             question.setGmtModified(question.getGmtCreate());
+            question.setViewCount(0);
+            question.setLikeCount(0);
+            question.setCommentCount(0);
             questionMapper.insert(question);
         }else{
             //更新
@@ -134,5 +142,12 @@ public class QuestionService {
                 throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
             }
         }
+    }
+
+    public void incView(Long id) {
+        Question question = new Question();
+        question.setId(id);
+        question.setViewCount(1);
+        questionExtMapper.incView(question);
     }
 }

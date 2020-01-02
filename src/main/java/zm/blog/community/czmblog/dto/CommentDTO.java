@@ -2,17 +2,16 @@ package zm.blog.community.czmblog.dto;
 
 import lombok.Data;
 import zm.blog.community.czmblog.model.User;
+
 @Data
-public class QuestionDTO {
+public class CommentDTO {
     private Long id;
-    private String title;
+    private Long parentId;
+    private Integer type;
+    private Long commentator;
     private Long gmtCreate;
     private Long gmtModified;
-    private Long creator;
+    private Long likeCount;
     private Integer commentCount;
-    private Integer viewCount;
-    private Integer likeCount;
-    private String tag;
-    private String description;
-    private User user;
+    private String content;
 }
