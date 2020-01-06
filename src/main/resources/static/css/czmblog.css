@@ -20,9 +20,8 @@ body{
 }
 .media-heading{
     font-weight: bolder;
-}
-.media{
-    border: 1px solid #999;
+    margin-top: 15px;
+    margin-left: 10px;
 }
 .profile .section{
     margin-top: 15px;
@@ -42,4 +41,51 @@ body{
 }
 .jumbotron{
     margin: 50px;
+}
+.comment{
+    margin: 10px 0;
+}
+.btn-comment{
+    float: right;
+    margin-bottom: 10px;
+}
+.comment-sp{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.comment-section{
+    margin-bottom: 15px;
+    border: 1px solid #E5E5E5;
+}
+.comment2-btn .btn{
+    margin: 10px 0;
+}
+.well{
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-top: 15px;
+}
+.menu{
+    collor: #999;
+    margin-top: 5px;
+    float: right;
+}
+.menu .icon{
+    margin-right: 6px;
+    font-size: 15px;
+}
+.menu .active{
+    color: #2aabd2;
+}
+.menu .icon:hover{
+    color: #2aabd2;
+}
+.question-title{
+    margin-top: 35px;
+}
+.comment2{
+    border-bottom: 1px solid black;
+}
+.pull-right{
+    border-bottom: 0px;
 }

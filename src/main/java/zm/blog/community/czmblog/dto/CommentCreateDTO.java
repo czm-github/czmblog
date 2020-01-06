@@ -4,7 +4,7 @@ import lombok.Data;
 import zm.blog.community.czmblog.model.User;
 
 @Data
-public class CommentDTO {
+public class CommentCreateDTO {
     private Long id;
     private Long parentId;
     private Integer type;
@@ -12,7 +12,6 @@ public class CommentDTO {
     private Long gmtCreate;
     private Long gmtModified;
     private Long likeCount;
-    private String content;
     private Integer commentCount;
-    private User user;
+    private String content;
 }
