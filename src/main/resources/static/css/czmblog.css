@@ -83,9 +83,42 @@ body{
 .question-title{
     margin-top: 35px;
 }
+.question-tag {
+    margin-right: 5px;
+}
+.question-related {
+    line-height: 20px;
+    font-size: 12px;
+    margin-left: 0;
+    list-style: none;
+    padding-left: 0;
+}
+.question-related .q-fontsize{
+    font-size: 15px;
+}
+.question-wechat {
+    width: 95%;
+}
 .comment2{
     border-bottom: 1px solid black;
 }
 .pull-right{
     border-bottom: 0px;
+}
+
+.side {
+    margin: 5px 0;
+}
+
+.publish-tag-tab{
+    display: none;
+    margin-top: 5px;
+}
+.label-info{
+    margin: 8px 8px;
+    white-space: normal;
+    display: inline-block;
+}
+.tab-content{
+    padding-top: 15px;
 }

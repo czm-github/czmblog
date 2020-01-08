@@ -7,27 +7,24 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import zm.blog.community.czmblog.dto.PaginationDTO;
-import zm.blog.community.czmblog.mapper.UserMapper;
 import zm.blog.community.czmblog.model.User;
 import zm.blog.community.czmblog.service.QuestionService;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class ProfileController {
-    @Autowired
-    private UserMapper userMapper;
     /*中间层*/
     @Autowired
     private QuestionService questionService;
+
     @GetMapping("/profile/{action}")
     public String profile(@PathVariable(name = "action") String action,
                           Model model,
                           HttpServletRequest request,
                           @RequestParam(name = "page",defaultValue = "1") Integer page,
                           @RequestParam(name = "size",defaultValue = "5") Integer size){
-        User user = null;
+        User user = (User) request.getSession().getAttribute("user");
         if(user == null){
             return "redirect:/";
         }
