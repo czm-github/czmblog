@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import zm.blog.community.czmblog.dto.PaginationDTO;
 import zm.blog.community.czmblog.model.User;
+import zm.blog.community.czmblog.service.NotificationService;
 import zm.blog.community.czmblog.service.QuestionService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +18,9 @@ public class ProfileController {
     /*中间层*/
     @Autowired
     private QuestionService questionService;
+
+    @Autowired
+    private NotificationService notificationService;
 
     @GetMapping("/profile/{action}")
     public String profile(@PathVariable(name = "action") String action,
@@ -31,12 +35,14 @@ public class ProfileController {
         if("questions".equals(action)){
             model.addAttribute("section","questions");
             model.addAttribute("sectionName","我的提问");
+            PaginationDTO pagination = questionService.list(user.getId(), page, size);
+            model.addAttribute("pagination",pagination);
         }else if("repies".equals(action)){
             model.addAttribute("section","repies");
             model.addAttribute("sectionName","最新回复");
+            PaginationDTO pagination = notificationService.list(user.getId(), page, size);
+            model.addAttribute("pagination",pagination);
         }
-        PaginationDTO paginaction = questionService.list(user.getId(), page, size);
-        model.addAttribute("paginaction",paginaction);
         return "profile";
     }
 }

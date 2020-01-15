@@ -18,7 +18,9 @@
         }else if(error_message == "问题补充不能为空"){
             $("#description").focus();
         }else if(error_message == "标签不能为空"){
-            $("#tag").focus();
+            $("#tag").focus(function () {
+                $("#select-tag").show();
+            });
         }
     }
 </script>
@@ -51,7 +53,7 @@
                 <!--标签-->
                 <div class="form-group">
                     <label for="tag">添加标签:</label>
-                    <input type="text" class="form-control" id="tag" name="tag" placeholder="输入标签以逗号分隔（，）"  th:value="${tag}" onclick="showSelectTag()">
+                    <input type="text" class="form-control" id="tag" name="tag" placeholder="输入标签以逗号分隔（，）"  th:value="${tag}" onfocus="showSelectTag()">
                     <!--标签选择-->
                     <div id="select-tag" class="publish-tag-tab">
                         <ul class="nav nav-tabs" role="tablist">

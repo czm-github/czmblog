@@ -33,6 +33,11 @@
                     </div>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
+                    <!--通知魔抗-->
+                    <li th:if="${session.user != null}">
+                        <a href="/profile/repies" class="nav-top-margin">通知<span class="badge" th:text="${session.unreadCount}"></span></a>
+                    </li>
+                    <!--<li><a href="#">通知<span class="badge nav-top-margin">42</span></a></li>-->
                     <!--发布文章模块-->
                     <li th:if="${session.user != null}">
                         <a href="/publish" class="nav-top-margin">发布</a>

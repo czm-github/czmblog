@@ -1,1 +1,1 @@
-ALTER TABLE USER ADD avatar_url VARCHAR(100) NULL;
+ALTER TABLE USER ADD avatar_url VARCHAR(100) NULL; --添加用户github的头像的地址

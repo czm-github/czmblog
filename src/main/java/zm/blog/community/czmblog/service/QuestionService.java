@@ -68,7 +68,7 @@ public class QuestionService {
             questionDTO.setDescription(question.getDescription());
             questionDTOList.add(questionDTO);
         }
-        paginationDTO.setQuestionDTOS(questionDTOList);
+        paginationDTO.setData(questionDTOList);
         /**
          * 这里返回的内容为null
          */
@@ -107,7 +107,7 @@ public class QuestionService {
             questionDTO.setUser(user);
             questionDTOList.add(questionDTO);
         }
-        paginationDTO.setQuestionDTOS(questionDTOList);
+        paginationDTO.setData(questionDTOList);
         return paginationDTO;
     }
 
