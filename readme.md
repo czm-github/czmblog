@@ -35,7 +35,7 @@ mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 - git clone https://github.com/czm-github/czmblog.git  
 - yum install maven  
 - mvn -v  
-- mvn compile package  
+- mvn clean compile package  
 - cp src/main/resources/application.properties src/main/resources/application-production.properties  
 - vim src/main/resources/application-production.properties  
 - mvn package  
