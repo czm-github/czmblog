@@ -21,7 +21,25 @@ https://github.com/codedrinker/community/blob/master/README.md
 
 mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 
-
+##部署
+###依赖
+- git  
+- jdk  
+- maven  
+- mysql
+###步骤
+- yum update  
+- yum install git  
+- mkdir App  
+- cd App  
+- git clone https://github.com/czm-github/czmblog.git  
+- yum install maven  
+- mvn -v  
+- mvn compile package  
+- cp src/main/resources/application.properties src/main/resources/application-production.properties  
+- vim src/main/resources/application-production.properties  
+- mvn package  
+- java -jar -Dspring.profiles.active=production target/czmblog-0.0.1-SNAPSHOT.jar
     
     
     

@@ -448,3 +448,307 @@
 2020-01-22 10:55:17.028 DEBUG 11880 --- [http-nio-8080-exec-2] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
 2020-01-22 10:55:17.029 DEBUG 11880 --- [http-nio-8080-exec-2] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
 2020-01-22 10:55:17.029 DEBUG 11880 --- [http-nio-8080-exec-2] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:16.222  INFO 7460 --- [restartedMain] z.b.c.czmblog.CzmblogApplication         : Starting CzmblogApplication on DESKTOP-91VJTP6 with PID 7460 (D:\czmblog\target\classes started by 则蒙 in D:\czmblog)
+2020-01-22 16:08:16.225  INFO 7460 --- [restartedMain] z.b.c.czmblog.CzmblogApplication         : No active profile set, falling back to default profiles: default
+2020-01-22 16:08:16.269  INFO 7460 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-01-22 16:08:16.269  INFO 7460 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-01-22 16:08:17.253  INFO 7460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-22 16:08:17.259  INFO 7460 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-22 16:08:17.260  INFO 7460 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-01-22 16:08:17.261  INFO 7460 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.21] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-01-22 16:08:17.261  INFO 7460 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-01-22 16:08:17.261  INFO 7460 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-01-22 16:08:17.262  INFO 7460 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-01-22 16:08:17.264  INFO 7460 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-01-22 16:08:17.340  INFO 7460 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-22 16:08:17.340  INFO 7460 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1070 ms
+2020-01-22 16:08:17.366  INFO 7460 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-22 16:08:17.458  INFO 7460 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-22 16:08:17.463  INFO 7460 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/czmblog'
+2020-01-22 16:08:17.842  INFO 7460 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-22 16:08:17.889  INFO 7460 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-22 16:08:18.146  INFO 7460 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-01-22 16:08:18.179  INFO 7460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-22 16:08:18.181  INFO 7460 --- [restartedMain] z.b.c.czmblog.CzmblogApplication         : Started CzmblogApplication in 2.289 seconds (JVM running for 3.476)
+2020-01-22 16:08:25.401  INFO 7460 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-22 16:08:25.402  INFO 7460 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-22 16:08:25.407  INFO 7460 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-01-22 16:08:25.464 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:25.480 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:25.491 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:25.498 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:25.499 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:25.502 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:25.516 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.Q.countBySearch                : ==>  Preparing: select count(*) from QUESTION 
+2020-01-22 16:08:25.517 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.Q.countBySearch                : ==> Parameters: 
+2020-01-22 16:08:25.517 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.Q.countBySearch                : <==      Total: 1
+2020-01-22 16:08:25.518 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.Q.selectBySearch               : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-01-22 16:08:25.518 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.Q.selectBySearch               : ==> Parameters: 0(Integer), 5(Integer)
+2020-01-22 16:08:25.523 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.Q.selectBySearch               : <==      Total: 5
+2020-01-22 16:08:25.523 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-01-22 16:08:25.524 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 2(Long)
+2020-01-22 16:08:25.524 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-01-22 16:08:25.530 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-01-22 16:08:25.531 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 2(Long)
+2020-01-22 16:08:25.531 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-01-22 16:08:25.532 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-01-22 16:08:25.532 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 2(Long)
+2020-01-22 16:08:25.532 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-01-22 16:08:25.532 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-01-22 16:08:25.532 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 2(Long)
+2020-01-22 16:08:25.532 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-01-22 16:08:25.533 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-01-22 16:08:25.533 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 2(Long)
+2020-01-22 16:08:25.533 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-01-22 16:08:25.813 DEBUG 7460 --- [http-nio-8080-exec-7] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:25.813 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:25.813 DEBUG 7460 --- [http-nio-8080-exec-7] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:25.813 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:25.813 DEBUG 7460 --- [http-nio-8080-exec-2] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:25.813 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:25.813 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:25.813 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:25.813 DEBUG 7460 --- [http-nio-8080-exec-2] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:25.813 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:25.814 DEBUG 7460 --- [http-nio-8080-exec-2] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:25.814 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:25.814 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:25.814 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:25.814 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:25.815 DEBUG 7460 --- [http-nio-8080-exec-7] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:25.815 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:25.816 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:25.816 DEBUG 7460 --- [http-nio-8080-exec-7] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:25.816 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:25.816 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:25.816 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:25.816 DEBUG 7460 --- [http-nio-8080-exec-2] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:25.817 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:25.817 DEBUG 7460 --- [http-nio-8080-exec-2] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:25.817 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:25.817 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:25.817 DEBUG 7460 --- [http-nio-8080-exec-7] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:25.817 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:25.817 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:25.818 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:25.818 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:25.818 DEBUG 7460 --- [http-nio-8080-exec-2] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:25.818 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:25.818 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:25.818 DEBUG 7460 --- [http-nio-8080-exec-7] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:25.868 DEBUG 7460 --- [http-nio-8080-exec-6] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:25.868 DEBUG 7460 --- [http-nio-8080-exec-6] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:25.868 DEBUG 7460 --- [http-nio-8080-exec-6] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:25.869 DEBUG 7460 --- [http-nio-8080-exec-6] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:25.870 DEBUG 7460 --- [http-nio-8080-exec-6] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:25.870 DEBUG 7460 --- [http-nio-8080-exec-6] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:32.519 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:32.519 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:32.520 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:32.521 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:32.521 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:32.521 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:32.523 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.Q.selectByPrimaryKey           : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG , DESCRIPTION from QUESTION where ID = ? 
+2020-01-22 16:08:32.524 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.Q.selectByPrimaryKey           : ==> Parameters: 68(Long)
+2020-01-22 16:08:32.524 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.Q.selectByPrimaryKey           : <==      Total: 1
+2020-01-22 16:08:32.525 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-01-22 16:08:32.525 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 2(Long)
+2020-01-22 16:08:32.526 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-01-22 16:08:32.527 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.Q.selectRelated                : ==>  Preparing: select * from QUESTION where id != ? and tag regexp ? 
+2020-01-22 16:08:32.529 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.Q.selectRelated                : ==> Parameters: 68(Long), java(String)
+2020-01-22 16:08:32.531 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.Q.selectRelated                : <==      Total: 8
+2020-01-22 16:08:32.541 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.CommentMapper.selectByExample  : ==>  Preparing: select ID, PARENT_ID, TYPE, COMMENTATOR, GMT_CREATE, GMT_MODIFIED, COMMENT_COUNT, LIKE_COUNT, CONTENT from COMMENT WHERE ( PARENT_ID = ? and TYPE = ? ) order by gmt_create desc 
+2020-01-22 16:08:32.541 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.CommentMapper.selectByExample  : ==> Parameters: 68(Long), 1(Integer)
+2020-01-22 16:08:32.541 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.CommentMapper.selectByExample  : <==      Total: 0
+2020-01-22 16:08:32.542 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.QuestionExtMapper.incView      : ==>  Preparing: update QUESTION set VIEW_COUNT = VIEW_COUNT + ? where id = ? 
+2020-01-22 16:08:32.543 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.QuestionExtMapper.incView      : ==> Parameters: 1(Integer), 68(Long)
+2020-01-22 16:08:32.547 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.QuestionExtMapper.incView      : <==    Updates: 1
+2020-01-22 16:08:32.583 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:32.583 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:32.584 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:32.585 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:32.586 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:32.587 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:32.588 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:32.588 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:32.588 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:32.589 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:32.589 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:32.590 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:32.590 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:32.590 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:32.590 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:32.590 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:32.590 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:32.591 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:32.591 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:32.591 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:32.591 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:32.591 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:32.591 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:32.592 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:32.592 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:32.593 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:32.592 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:32.593 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:32.594 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:32.594 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:32.594 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:32.594 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:32.595 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:32.596 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:32.596 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:32.596 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:32.597 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:32.597 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:32.597 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:32.599 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:32.600 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:32.600 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:32.602 DEBUG 7460 --- [http-nio-8080-exec-2] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:32.602 DEBUG 7460 --- [http-nio-8080-exec-2] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:32.602 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:32.602 DEBUG 7460 --- [http-nio-8080-exec-2] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:32.603 DEBUG 7460 --- [http-nio-8080-exec-2] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:32.604 DEBUG 7460 --- [http-nio-8080-exec-2] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:32.604 DEBUG 7460 --- [http-nio-8080-exec-2] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:32.604 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:32.605 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:32.606 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:32.606 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:32.606 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:32.607 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:32.607 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:32.607 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:32.608 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:32.608 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:32.608 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:32.609 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:32.609 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:32.609 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:32.611 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:32.611 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:32.611 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:32.614 DEBUG 7460 --- [http-nio-8080-exec-7] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:32.614 DEBUG 7460 --- [http-nio-8080-exec-7] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:32.614 DEBUG 7460 --- [http-nio-8080-exec-7] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:32.615 DEBUG 7460 --- [http-nio-8080-exec-7] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:32.615 DEBUG 7460 --- [http-nio-8080-exec-7] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:32.615 DEBUG 7460 --- [http-nio-8080-exec-7] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:32.698 DEBUG 7460 --- [http-nio-8080-exec-6] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:32.698 DEBUG 7460 --- [http-nio-8080-exec-6] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:32.698 DEBUG 7460 --- [http-nio-8080-exec-6] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:32.699 DEBUG 7460 --- [http-nio-8080-exec-6] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:32.699 DEBUG 7460 --- [http-nio-8080-exec-6] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:32.699 DEBUG 7460 --- [http-nio-8080-exec-6] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:36.376 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:36.376 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:36.377 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:36.378 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:36.378 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:36.378 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:36.380 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? ) 
+2020-01-22 16:08:36.381 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long)
+2020-01-22 16:08:36.381 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:36.382 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.N.selectByExampleWithRowbounds : ==>  Preparing: select ID, NOTIFIER, RECEIVER, OUTERID, TYPE, GMT_CREATE, STATUS, NOTIFIER_NAME, OUTER_TITLE from NOTIFICATION WHERE ( RECEIVER = ? ) order by gmt_create desc 
+2020-01-22 16:08:36.382 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.N.selectByExampleWithRowbounds : ==> Parameters: 2(Long)
+2020-01-22 16:08:36.382 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.N.selectByExampleWithRowbounds : <==      Total: 0
+2020-01-22 16:08:36.403 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:36.403 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:36.403 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:36.403 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:36.404 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:36.404 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:36.404 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:36.404 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:36.404 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:36.405 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:36.405 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:36.405 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:36.406 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:36.406 DEBUG 7460 --- [http-nio-8080-exec-2] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:36.406 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:36.406 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:36.406 DEBUG 7460 --- [http-nio-8080-exec-2] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:36.406 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:36.406 DEBUG 7460 --- [http-nio-8080-exec-2] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:36.406 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:36.406 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:36.407 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:36.407 DEBUG 7460 --- [http-nio-8080-exec-2] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:36.407 DEBUG 7460 --- [http-nio-8080-exec-2] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:36.407 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:36.407 DEBUG 7460 --- [http-nio-8080-exec-2] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:36.407 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:36.408 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:36.410 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:36.410 DEBUG 7460 --- [http-nio-8080-exec-4] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:37.502 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:37.502 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:37.502 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:37.503 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:37.503 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:37.503 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:37.504 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.Q.countBySearch                : ==>  Preparing: select count(*) from QUESTION 
+2020-01-22 16:08:37.504 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.Q.countBySearch                : ==> Parameters: 
+2020-01-22 16:08:37.505 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.Q.countBySearch                : <==      Total: 1
+2020-01-22 16:08:37.505 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.Q.selectBySearch               : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-01-22 16:08:37.505 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.Q.selectBySearch               : ==> Parameters: 0(Integer), 5(Integer)
+2020-01-22 16:08:37.508 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.Q.selectBySearch               : <==      Total: 5
+2020-01-22 16:08:37.508 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-01-22 16:08:37.508 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 2(Long)
+2020-01-22 16:08:37.509 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-01-22 16:08:37.509 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-01-22 16:08:37.509 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 2(Long)
+2020-01-22 16:08:37.509 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-01-22 16:08:37.511 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-01-22 16:08:37.512 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 2(Long)
+2020-01-22 16:08:37.512 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-01-22 16:08:37.512 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-01-22 16:08:37.512 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 2(Long)
+2020-01-22 16:08:37.513 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-01-22 16:08:37.513 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-01-22 16:08:37.513 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 2(Long)
+2020-01-22 16:08:37.513 DEBUG 7460 --- [http-nio-8080-exec-10] z.b.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-01-22 16:08:37.535 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:37.534 DEBUG 7460 --- [http-nio-8080-exec-7] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:37.535 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:37.535 DEBUG 7460 --- [http-nio-8080-exec-7] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:37.535 DEBUG 7460 --- [http-nio-8080-exec-7] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:37.535 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:37.536 DEBUG 7460 --- [http-nio-8080-exec-7] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:37.536 DEBUG 7460 --- [http-nio-8080-exec-7] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:37.536 DEBUG 7460 --- [http-nio-8080-exec-7] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:37.537 DEBUG 7460 --- [http-nio-8080-exec-6] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:37.537 DEBUG 7460 --- [http-nio-8080-exec-6] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:37.537 DEBUG 7460 --- [http-nio-8080-exec-6] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:37.537 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:37.538 DEBUG 7460 --- [http-nio-8080-exec-6] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:37.538 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:37.538 DEBUG 7460 --- [http-nio-8080-exec-6] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:37.538 DEBUG 7460 --- [http-nio-8080-exec-3] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:37.538 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:37.538 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:37.538 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:37.538 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:37.538 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:37.539 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:37.539 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:37.540 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:37.538 DEBUG 7460 --- [http-nio-8080-exec-6] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:37.540 DEBUG 7460 --- [http-nio-8080-exec-1] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:37.540 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:37.541 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:37.541 DEBUG 7460 --- [http-nio-8080-exec-9] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:37.541 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:37.542 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:37.542 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:37.543 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:37.543 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:37.543 DEBUG 7460 --- [http-nio-8080-exec-8] z.b.c.c.m.N.countByExample               : <==      Total: 1
+2020-01-22 16:08:37.568 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-01-22 16:08:37.569 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.UserMapper.selectByExample     : ==> Parameters: a86e907a-0c0e-45bb-bd7e-6049268e3d7a(String)
+2020-01-22 16:08:37.569 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-01-22 16:08:37.569 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-01-22 16:08:37.569 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.N.countByExample               : ==> Parameters: 2(Long), 0(Integer)
+2020-01-22 16:08:37.569 DEBUG 7460 --- [http-nio-8080-exec-5] z.b.c.c.m.N.countByExample               : <==      Total: 1
