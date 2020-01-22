@@ -20,15 +20,15 @@
                 <a class="navbar-brand" href="/">CZM</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <form class="navbar-form navbar-left">
+                <form class="navbar-form navbar-left" action="/" method="get">
                     <ul class="nav nav-pills navbar-left nav-top-margin">
                         <li class="li-length active"><a href="/">推荐</a></li>
                     </ul>&nbsp;
                     <div class="input-group nav-top-margin">
-                        <input type="text" class="form-control" placeholder="请输入问题关键字">
+                        <input type="text" class="form-control" name="search" placeholder="请输入问题关键字">
                         <div class="input-group-btn">
                             <!-- Buttons -->
-                            <button class="btn btn-default">Search</button>
+                            <button class="btn btn-default" type="submit">Search</button>
                         </div>
                     </div>
                 </form>

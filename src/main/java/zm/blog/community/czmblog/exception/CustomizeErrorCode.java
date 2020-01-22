@@ -11,6 +11,7 @@ public enum CustomizeErrorCode implements ICustomizeErrorCode {
     INVALID_INPUT(2011, "非法输入"),
     NOTIFICATION_NOT_FOUND(2012,"找不到该评论"),
     READ_NOTIFICATION_FAIL(2013,"读取评论失败"),
+    FILE_UPLOAD_FAIL(2014,"图片上传失败"),
     ;
     private String message;
     private Integer code;

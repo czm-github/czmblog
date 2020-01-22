@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import zm.blog.community.czmblog.dto.PaginationDTO;
 import zm.blog.community.czmblog.dto.QuestionDTO;
+import zm.blog.community.czmblog.dto.QuestionQueryDTO;
 import zm.blog.community.czmblog.exception.CustomizeErrorCode;
 import zm.blog.community.czmblog.exception.CustomizeException;
 import zm.blog.community.czmblog.mapper.QuestionExtMapper;
@@ -37,10 +38,17 @@ public class QuestionService {
     private UserMapper userMapper;
 
     /*返回首页的文章列表*/
-    public PaginationDTO list(Integer page, Integer size) {
+    public PaginationDTO list(String search, Integer page, Integer size) {
+        if (StringUtils.isNotBlank(search)) {
+            String[] tags = StringUtils.split(search, " ");
+            search = Arrays.stream(tags).collect(Collectors.joining("|"));
+        }
         PaginationDTO paginationDTO = new PaginationDTO();
         Integer totalPage;
-        Integer totalCount = (int) questionMapper.countByExample(new QuestionExample());
+        QuestionQueryDTO questionQueryDTO = new QuestionQueryDTO();
+        questionQueryDTO.setSearch(search);
+        Integer totalCount = questionExtMapper.countBySearch(questionQueryDTO);
+
         if(totalCount % size == 0){
             totalPage = totalCount /size;
         }else{
@@ -55,9 +63,9 @@ public class QuestionService {
         paginationDTO.setPagination(totalPage,page);
         //偏移量中的第一个参数，表示从第几条数据开始，第二个参数为size表示展示的数据为固定5
         Integer offset = size * (page - 1);
-        QuestionExample questionExample = new QuestionExample();
-        questionExample.setOrderByClause("gmt_create desc");
-        List<Question> questions = questionMapper.selectByExampleWithRowbounds(questionExample, new RowBounds(offset, size));
+        questionQueryDTO.setPage(offset);
+        questionQueryDTO.setSize(size);
+        List<Question> questions = questionExtMapper.selectBySearch(questionQueryDTO);
         List<QuestionDTO> questionDTOList = new ArrayList<>();
 
         for(Question question : questions){

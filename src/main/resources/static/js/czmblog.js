@@ -74,19 +74,21 @@ function collapseComments(e) {
                         "class": "media-object img-thumbnail img-wh img-responsive",
                         "src": comment.user.avatarUrl
                     }));
-                    var mediaBodyElement = $("<div/>", {
+                    var mediaBodyLeft = $("<div/>", {
                         "class": "media-body"
                     }).append($("<span/>", {
+                        "class": "media-heading",
                         "html": comment.user.name+"："
                     }).append($("<span/>", {
                         "html": comment.content
-                    }).append($("<span/>", {
+                    })));
+                    var mediaBodyRight = $("<span/>", {
                         "class": "pull-right",
                         "html": moment(comment.gmtCreate).format('YYYY-MM-DD HH:mm')
-                    }))));
+                    });
                     var mediaElement = $("<div/>", {
                         "class": "media"
-                    }).append(mediaLeftElement).append(mediaBodyElement);
+                    }).append(mediaLeftElement).append(mediaBodyLeft).append(mediaBodyRight);
                     var commentElement = $("<div/>", {
                         "class": "col-lg-12 col-md-12 col-sm-12 col-xs-12"
                     }).append(UlElement);

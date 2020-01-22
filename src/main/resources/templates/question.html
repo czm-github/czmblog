@@ -6,10 +6,14 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/css/bootstrap-theme.min.css"/>
     <link rel="stylesheet" href="/css/czmblog.css"/>
+    <link rel="stylesheet" href="/css/editormd.preview.min.css">
     <script src="/js/jquery-3.4.1.min.js"></script>
     <script src="/js/bootstrap.min.js" type="application/javascript"></script>
     <script src="/js/czmblog.js"></script>
     <script src="/js/moment.js"></script>
+    <script src="/js/editormd.min.js"></script>
+    <script src="/js/marked.min.js"></script>
+    <script src="/js/prettify.min.js"></script>
 </head>
 <body>
 <div th:insert="~{navigaction :: nav}"></div>
@@ -21,13 +25,20 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h3 class="question-title"><span th:text="${question.title}"></span></h3>
                     <span class="text-desc">
-                作者：<span th:text="${question.user.name}"></span>&nbsp;|
-                发布于<span th:text="${#dates.format(question.gmtCreate,'yyyy-MM-dd HH:mm')}"></span>&nbsp;|
-                <span th:text="${question.viewCount}"></span>次浏览
-            </span>
-                    <!--内容-->
+                    作者：<span th:text="${question.user.name}"></span>&nbsp;|
+                    发布于<span th:text="${#dates.format(question.gmtCreate,'yyyy-MM-dd HH:mm')}"></span>&nbsp;|
+                    <span th:text="${question.viewCount}"></span>次浏览</span>
                     <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" th:text="${question.description}"></div>
+                    <!--内容-->
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="question-view">
+                        <textarea style="display:none;" th:text="${question.description}"></textarea>
+                    </div>
+                    <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+                    <script type="text/javascript">
+                        $(function () {
+                            editormd.markdownToHTML("question-view", {});
+                        });
+                    </script>
                     <!--标签-->
                     <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -54,9 +65,9 @@
                     <div class="media">
                         <div class="media-left">
                             <img class="media-object img-wh img-thumbnail" th:src="${comment.user.avatarUrl}">
-                            <h5 class="media-heading" th:text="${comment.user.name}"></h5>
                         </div>
                         <div class="media-body">
+                            <span class="media-heading" th:text="${comment.user.name}"></span>：
                             <div th:text="${comment.content}"></div>
                         </div>
                         <div class="menu">
@@ -114,11 +125,11 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="comment_section">
                     <div>
                         <div class="media-left">
-                            <img class="media-object img-wh img-thumbnail" th:src="${question.user.avatarUrl}">
+                            <img class="media-object img-wh img-thumbnail" th:src="${session.user != null ? session.user.avatarUrl : '/images/default-avatar.png'}">
                         </div>
                         <div class="media-body" style="padding-top: 20px;">
                             <h5 class="media-heading">
-                                <span th:text="${question.user.name}"></span>
+                                <span th:text="${session.user != null ? session.user.name : '匿名用户'}"></span>
                             </h5>
                             </span>
                         </div>
@@ -163,6 +174,6 @@
         </div>
     </div>
 </div>
-
+<div th:insert="~{footer :: foot}"></div>
 </body>
 </html>
