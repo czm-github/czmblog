@@ -1,1 +1,1 @@
-ALTER TABLE USER ADD bio VARCHAR(256) NULL; --添加用户github的备注
+alter table user add bio varchar(256) null; --添加用户github的备注
