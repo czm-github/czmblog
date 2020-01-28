@@ -62,7 +62,7 @@ public class QuestionService {
         }
         paginationDTO.setPagination(totalPage,page);
         //偏移量中的第一个参数，表示从第几条数据开始，第二个参数为size表示展示的数据为固定5
-        Integer offset = size * (page - 1);
+        Integer offset = page < 1 ? 0 : size * (page - 1);
         questionQueryDTO.setPage(offset);
         questionQueryDTO.setSize(size);
         List<Question> questions = questionExtMapper.selectBySearch(questionQueryDTO);
