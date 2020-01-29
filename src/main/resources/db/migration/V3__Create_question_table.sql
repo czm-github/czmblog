@@ -1,6 +1,6 @@
 create table question
 (
-    id bigint identity(1,1) primary key,
+    id bigint auto_increment primary key,
     title varchar(50), --标题
     description text, --内容
     gmt_create bigint, --创建时间

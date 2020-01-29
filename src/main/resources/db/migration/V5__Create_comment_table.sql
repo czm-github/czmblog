@@ -1,6 +1,6 @@
 create table comment
 (
-    id bigint identity(1,1) primary key not null,
+    id bigint auto_increment primary key not null,
     parent_id bigint not null, --问题的id
     type int not null, --回复的类型（1:回复的问题，2:回复问题的评论）
     commentator bigint not null, --问题发布者的id
