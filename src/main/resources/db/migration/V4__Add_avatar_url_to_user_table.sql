@@ -1,1 +1,1 @@
-alter table user add avatar_url varchar(100) null; --添加用户github的头像的地址
+alter table user add avatar_url varchar(100) null;

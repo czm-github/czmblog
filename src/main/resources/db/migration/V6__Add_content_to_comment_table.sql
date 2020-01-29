@@ -1,1 +1,1 @@
-alter table comment add content varchar(1024) null; --添加回复的内容
+alter table comment add content varchar(1024) null;
