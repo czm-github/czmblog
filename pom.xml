@@ -18,6 +18,32 @@
         <java.version>1.8</java.version>
     </properties>
 
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <db.url>jdbc:h2:~/czmblog</db.url>
+                <db.user>sa</db.user>
+                <db.password>123</db.password>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>production</id>
+            <properties>
+                <db.url>jdbc:mysql://10.9.24.207:3306/blog</db.url>
+                <db.user>root</db.user>
+                <db.password>czmblog9373</db.password>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+    </profiles>
+
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -111,9 +137,9 @@
 					<password>123</password>
 				</configuration>-->
                 <configuration>
-                    <url>jdbc:mysql://10.9.24.207:3306/blog</url>
-                    <user>root</user>
-                    <password>czmblog9373</password>
+                    <url>${db.url}</url>
+                    <user>${db.user}</user>
+                    <password>${db.password}</password>
                 </configuration>
                 <dependencies>
                     <dependency>
