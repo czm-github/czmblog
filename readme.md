@@ -3,7 +3,9 @@ https://spring.io/guides
 ## springboot快速搭建
 https://spring.io/guides/gs/serving-web-content/
 ## git、github
-https://github.com/
+https://github.com/ 
+## git提交
+git add .  git commit -m "" git push
 ## git登录之Building OAuth and okhttp
 https://developer.github.com/apps/  
 https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/  
@@ -43,8 +45,6 @@ mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 - ps -aux | grep java  
 - git pull  
 - mvn clean compile flyway:migrate
-
---WUGAUN
 
     
     

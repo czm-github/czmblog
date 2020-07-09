@@ -17,7 +17,7 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">博客</span>
                 </button>
-                <a class="navbar-brand" href="/">草伟社区</a>
+                <a class="navbar-brand" href="/">码问社区</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <form class="navbar-form navbar-left" action="/" method="get">
@@ -53,10 +53,10 @@
                             <li><a href="/logout">退出登录</a></li>
                         </ul>
                     </li>
-                    <!--<li th:if="${session.user == null}"><a href="https://github.com/login/oauth/authorize?client_id=ef177563cf41b03c075d&redirect_uri=http://localhost:8080/callback&scope=user&state=1">登录</a></li>-->
-                    <li th:if="${session.user == null}">
+                    <li th:if="${session.user == null}"><a href="https://github.com/login/oauth/authorize?client_id=ef177563cf41b03c075d&redirect_uri=http://localhost:8080/callback&scope=user&state=1">登录</a></li>
+                    <!--<li th:if="${session.user == null}">
                         <a th:href="@{https://github.com/login/oauth/authorize(client_id='ef177563cf41b03c075d',redirect_uri=${#httpServletRequest.getRequestURL()+'callback'},scope='user',state=1)}">登录</a>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
         </div>
