@@ -90,7 +90,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <scope>8.0.16</scope>
+            <scope>5.1.44</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
         <dependency>
@@ -134,14 +134,14 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>5.2.4</version>
                 <!--h2-->
-               <!-- <configuration>
+                <!--<configuration>
 					<url>jdbc:h2:~/czmblog</url>
 					<user>sa</user>
 					<password>123</password>
 				</configuration>-->
                 <!--mysql-->
                 <configuration>
-                    <url>jdbc:mysql://localhost:3306/czmblog</url>
+                    <url>jdbc:mysql://10.9.24.207:3306/czmblog</url>
                     <user>root</user>
                     <password>admin</password>
                 </configuration>
@@ -154,7 +154,7 @@
                     <dependency>
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>
-                        <scope>8.0.16</scope>
+                        <scope>5.1.45</scope>
                     </dependency>
                     <!--<dependency>
                         <groupId>com.h2database</groupId>
@@ -169,7 +169,7 @@
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
                 <version>1.3.7</version>
                 <dependencies>
-                    <!--<dependency>
+                   <!-- <dependency>
                         <groupId>com.h2database</groupId>
                         <artifactId>h2</artifactId>
                         <version>1.4.199</version>
@@ -177,7 +177,7 @@
                     <dependency>
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>
-                        <scope>8.0.16</scope>
+                        <scope>5.1.45</scope>
                     </dependency>
                 </dependencies>
             </plugin>
