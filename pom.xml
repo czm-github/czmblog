@@ -19,6 +19,7 @@
     </properties>
 
     <profiles>
+        <!--h2-->
         <profile>
             <id>dev</id>
             <properties>
@@ -30,6 +31,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
         </profile>
+        <!--mysql-->
         <profile>
             <id>production</id>
             <properties>

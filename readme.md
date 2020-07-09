@@ -44,5 +44,7 @@ mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 - git pull  
 - mvn clean compile flyway:migrate
 
+--WUGAUN
+
     
     

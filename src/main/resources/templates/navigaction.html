@@ -17,7 +17,7 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">博客</span>
                 </button>
-                <a class="navbar-brand" href="/">CZM</a>
+                <a class="navbar-brand" href="/">草伟社区</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <form class="navbar-form navbar-left" action="/" method="get">
@@ -33,7 +33,7 @@
                     </div>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <!--通知魔抗-->
+                    <!--通知模块-->
                     <li th:if="${session.user != null}">
                         <a href="/profile/repies" class="nav-top-margin">通知<span class="badge" th:text="${session.unreadCount}"></span></a>
                     </li>
