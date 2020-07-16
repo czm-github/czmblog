@@ -45,6 +45,7 @@ mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 - ps -aux | grep java  
 - git pull  
 - mvn clean compile flyway:migrate
+asdasd
 
     
     
