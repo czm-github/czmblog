@@ -18,20 +18,25 @@
         <java.version>1.8</java.version>
     </properties>
 
-    <!--<profiles>
-        &lt;!&ndash;h2&ndash;&gt;
+    <profiles>
+        <!--h2-->
         <profile>
             <id>dev</id>
-            <properties>
+            <!--<properties>
                 <db.url>jdbc:h2:~/czmblog</db.url>
                 <db.user>sa</db.user>
                 <db.password>123</db.password>
+            </properties>-->
+            <properties>
+                <db.url>jdbc:mysql://localhost:8080/czmblog</db.url>
+                <db.user>root</db.user>
+                <db.password>admin</db.password>
             </properties>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
         </profile>
-        &lt;!&ndash;mysql&ndash;&gt;
+        <!--mysql-->
         <profile>
             <id>production</id>
             <properties>
@@ -43,7 +48,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
         </profile>
-    </profiles>-->
+    </profiles>
 
 
     <dependencies>
@@ -140,27 +145,27 @@
 					<password>123</password>
 				</configuration>-->
                 <!--mysql-->
-                <configuration>
+                <!--<configuration>
                     <url>jdbc:mysql://10.9.24.207:3306/czmblog</url>
                     <user>root</user>
                     <password>admin</password>
-                </configuration>
-                <!--<configuration>
+                </configuration>-->
+                <configuration>
                     <url>${db.url}</url>
                     <user>${db.user}</user>
                     <password>${db.password}</password>
-                </configuration>-->
+                </configuration>
                 <dependencies>
                     <dependency>
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>
                         <scope>5.1.45</scope>
                     </dependency>
-                    <!--<dependency>
+                    <dependency>
                         <groupId>com.h2database</groupId>
                         <artifactId>h2</artifactId>
                         <version>1.4.199</version>
-                    </dependency>-->
+                    </dependency>
                 </dependencies>
             </plugin>
 
@@ -169,11 +174,11 @@
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
                 <version>1.3.7</version>
                 <dependencies>
-                   <!-- <dependency>
+                    <dependency>
                         <groupId>com.h2database</groupId>
                         <artifactId>h2</artifactId>
                         <version>1.4.199</version>
-                    </dependency>-->
+                    </dependency>
                     <dependency>
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>

@@ -56,6 +56,8 @@
                 <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
                 <script src="/js/editormd.min.js"></script>
                 <script type="text/javascript">
+                    //编辑时会进入/publish页面，所以请求为/publish/file/upload
+                    //修改file/upload为/file/uploac即可
                     $(function() {
                         var editor = editormd("question-editor", {
                             width  : "100%",
@@ -64,7 +66,7 @@
                             placeholder : "请输入问题的内容",
                             imageUpload       : true,
                             imageFormats      : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
-                            imageUploadURL : "file/upload",
+                            imageUploadURL : "/file/upload",
                             emoji : true
                         });
                     });
