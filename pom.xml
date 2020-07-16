@@ -18,15 +18,15 @@
         <java.version>1.8</java.version>
     </properties>
 
-    <profiles>
-        <!--h2-->
+    <!--<profiles>
+        &lt;!&ndash;h2&ndash;&gt;
         <profile>
             <id>dev</id>
-            <!--<properties>
+            &lt;!&ndash;<properties>
                 <db.url>jdbc:h2:~/czmblog</db.url>
                 <db.user>sa</db.user>
                 <db.password>123</db.password>
-            </properties>-->
+            </properties>&ndash;&gt;
             <properties>
                 <db.url>jdbc:mysql://localhost:8080/czmblog</db.url>
                 <db.user>root</db.user>
@@ -36,7 +36,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
         </profile>
-        <!--mysql-->
+        &lt;!&ndash;mysql&ndash;&gt;
         <profile>
             <id>production</id>
             <properties>
@@ -48,7 +48,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
         </profile>
-    </profiles>
+    </profiles>-->
 
 
     <dependencies>
@@ -139,28 +139,28 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>5.2.4</version>
                 <!--h2-->
-                <!--<configuration>
+                <configuration>
 					<url>jdbc:h2:~/czmblog</url>
 					<user>sa</user>
 					<password>123</password>
-				</configuration>-->
+				</configuration>
                 <!--mysql-->
                 <!--<configuration>
                     <url>jdbc:mysql://10.9.24.207:3306/czmblog</url>
                     <user>root</user>
                     <password>admin</password>
                 </configuration>-->
-                <configuration>
+                <!--<configuration>
                     <url>${db.url}</url>
                     <user>${db.user}</user>
                     <password>${db.password}</password>
-                </configuration>
+                </configuration>-->
                 <dependencies>
-                    <dependency>
+                    <!--<dependency>
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>
-                        <scope>5.1.45</scope>
-                    </dependency>
+                        <scope>5.1.47</scope>
+                    </dependency>-->
                     <dependency>
                         <groupId>com.h2database</groupId>
                         <artifactId>h2</artifactId>
@@ -179,11 +179,11 @@
                         <artifactId>h2</artifactId>
                         <version>1.4.199</version>
                     </dependency>
-                    <dependency>
+                    <!--<dependency>
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>
-                        <scope>5.1.45</scope>
-                    </dependency>
+                        <scope>5.1.47</scope>
+                    </dependency>-->
                 </dependencies>
             </plugin>
 

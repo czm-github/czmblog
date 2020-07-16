@@ -37,10 +37,10 @@ mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 - git clone https://github.com/czm-github/czmblog.git  
 - yum install maven  
 - mvn -v  
-- mvn clean compile package  
-- cp src/main/resources/application.properties src/main/resources/application-production.properties  
+- 下载Mvn的依赖：mvn clean compile package  
+- 生产环境默认使用的配置文件为：cp src/main/resources/application.properties src/main/resources/application-production.properties  
 - vim src/main/resources/application-production.properties  
-- mvn package  
+- 更新：mvn package  
 - java -jar -Dspring.profiles.active=production target/czmblog-0.0.1-SNAPSHOT.jar  
 - ps -aux | grep java  
 - git pull  
